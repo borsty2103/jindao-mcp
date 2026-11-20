@@ -12,8 +12,8 @@ Official discovery repository for the public, strictly read-only **JINDAO** Mode
 
 - **Streamable HTTP Endpoint:** `https://jindao.de/mcp`
 - **Transport:** Stateless Streamable HTTP (JSON-RPC 2.0, HTTP/HTTPS)
-- **Authentication:** None required (100% public, zero private user data, read-only annotations on every tool)
-- **Languages:** Bilingual German (`de`) and English (`en`) across all tools, resources and prompts
+- **Authentication:** None required (strictly public product/brand discovery, capped previews and textbook estimators; zero access to user accounts, Pro engines, Trainer workspaces or Nutritionist portals)
+- **Languages:** Bilingual German (`de`) and English (`en`) across all 7 tools, 5 resources and 3 prompts
 - **Discovery Manifests:**
   - MCP Server Card: `https://jindao.de/.well-known/mcp.json`
   - Google A2A Agent Card: `https://jindao.de/.well-known/agent.json`
@@ -49,30 +49,24 @@ Official discovery repository for the public, strictly read-only **JINDAO** Mode
 }
 ```
 
-### Included Read-Only Tools (10)
+### Included Read-Only Discovery Tools (7)
 
 | Tool | Purpose |
 | :--- | :--- |
-| `jindao_get_platform_overview` | Verified capabilities, roles (Free, Pro, Trainer, Nutritionist, Client), pricing and GDPR hosting facts |
-| `jindao_search_exercises` | Search 5,443 exercises by query, muscle group or equipment with DE/EN cues and MET |
-| `jindao_search_gym_machines` | Search 426 commercial machines (Gym80, Technogym, Hammer Strength, Life Fitness, Cybex, Panatta, Nautilus) |
-| `jindao_find_machine_substitutes` | Find biomechanical gym-switch substitutes for any machine |
-| `jindao_get_muscle_volume_landmarks` | Query 17 individual muscles (MEV/MAV/MRV) and audit weekly working sets |
-| `jindao_calculate_1rm_and_load_table` | Estimate Epley/Brzycki 1RM, percentage table and RPE progression weight |
-| `jindao_calculate_barbell_plates` | Exact per-side barbell plate decomposition plus 4-stage warm-up ramp |
-| `jindao_convert_cable_pulley_weight` | Convert cable pulley stations (1:1, 2:1, 4:1) preserving true handle tension |
-| `jindao_get_training_splits` | Filter all 12 training splits by weekly frequency or goal |
-| `jindao_calculate_nutrition_and_body_composition` | Compute BMR, TDEE, macro targets, US Navy/RFM body fat percentage and FFMI |
+| `jindao_get_platform_overview` | Verified platform facts, supported roles and German GDPR hosting overview |
+| `jindao_get_pricing_and_roles` | Live Free, Pro, Nutritionist Solo, Trainer Solo, Trainer Pro and Client consent scope comparison |
+| `jindao_list_supported_gym_brands` | Supported commercial gym equipment brands and model counts (full Gym Twin in JINDAO Pro) |
+| `jindao_preview_gym_machines` | Capped directory preview (max 6 items) without proprietary ergonomic setups or resistance curves |
+| `jindao_preview_exercises` | Capped directory preview (max 5 items) without full 4-phase coaching guides or Pro evidence scores |
+| `jindao_get_training_splits` | High-level catalog of all 12 training split templates without generating user workout plans |
+| `jindao_get_public_textbook_estimate` | Basic textbook formulas only: Epley 1RM, standard 20 kg barbell plate split or Mifflin-St Jeor BMR |
 
 ---
 
 ## Deutscher Ueberblick
 
-Der oeffentliche **JINDAO MCP Server** stellt KI-Assistenten, IDEs und Sprachmodellen verifizierte Fakten und Sportwissenschafts-Rechner unter `https://jindao.de/mcp` schreibgeschuetzt und ohne Anmeldung bereit:
+Der oeffentliche **JINDAO MCP Server** stellt KI-Assistenten, IDEs und Sprachmodellen verifizierte Produktfakten, Tarife, Herstellerlisten, begrenzte Katalogvorschauen und drei einfache Basisformeln unter `https://jindao.de/mcp` schreibgeschuetzt bereit. Geschuetzte Konto-, Pro-, Trainer- und Ernaehrungsberater-Funktionen bleiben vollstaendig hinter Login und Lizenz geschuetzt.
 
-- **426 reale Studiogeraete** von 24+ Marken inklusive Studio-Zwilling und Kabelzug-Umrechnung (`1:1`, `2:1`, `4:1`)
-- **5.443 Uebungen**, **17 Einzelmuskeln** (MEV/MAV/MRV), **12 Trainings-Splits** und **6 Rechner**
-- **Alle Rollen abgebildet:** Athleten (Free & Pro), Trainer (Solo & Pro mit Co-Branding), Ernaehrungsberater (Solo) und Klienten (7 serverseitig erzwungene Datenschutz-Freigaben)
 - **Ausfuehrliche deutsche Werkzeug-Referenz:** [docs/TOOLS_DE.md](./docs/TOOLS_DE.md)
 
 ---
@@ -80,5 +74,5 @@ Der oeffentliche **JINDAO MCP Server** stellt KI-Assistenten, IDEs und Sprachmod
 ## Privacy & Security Guarantee
 
 - This repository is strictly a **public discovery and schema package**. It contains zero proprietary application source code or user data.
-- `https://jindao.de/mcp` has zero database access to user workouts, health metrics, client messages or billing records.
+- `https://jindao.de/mcp` cannot access private user records and cannot bypass JINDAO account registration, Pro, Trainer or Nutritionist paywalls.
 - Hosted in Germany (`jindao.de` and Frankfurt `europe-west3`) with zero Google Analytics.
