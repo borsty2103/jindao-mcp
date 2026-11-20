@@ -6,6 +6,10 @@
   "version": "1.0.0",
   "websiteUrl": "https://jindao.de/",
   "documentationUrl": "https://jindao.de/en/mcp-ai-interface",
+  "repository": {
+    "url": "https://github.com/borsty2103/jindao-mcp",
+    "source": "github"
+  },
   "remotes": [
     {
       "type": "streamable-http",
