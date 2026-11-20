@@ -1,0 +1,51 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "de.jindao/fitness-mcp",
+  "title": "JINDAO Strength, Gym Machines, Rehab, Nutrition & Coaching MCP",
+  "description": "Public read-only, stateless bilingual (DE/EN) MCP server exposing 426 commercial gym machines across 24 brands, 5,443 exercises, 17-muscle MEV/MAV/MRV landmarks, 12 workout splits and sports science calculators.",
+  "version": "1.0.0",
+  "websiteUrl": "https://jindao.de/",
+  "documentationUrl": "https://jindao.de/en/mcp-ai-interface",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://jindao.de/mcp"
+    }
+  ],
+  "authentication": {
+    "required": false,
+    "type": "none"
+  },
+  "capabilities": {
+    "tools": [
+      "jindao_get_platform_overview",
+      "jindao_search_exercises",
+      "jindao_search_gym_machines",
+      "jindao_find_machine_substitutes",
+      "jindao_get_muscle_volume_landmarks",
+      "jindao_calculate_1rm_and_load_table",
+      "jindao_calculate_barbell_plates",
+      "jindao_convert_cable_pulley_weight",
+      "jindao_get_training_splits",
+      "jindao_calculate_nutrition_and_body_composition"
+    ],
+    "resources": [
+      "jindao://overview/de",
+      "jindao://overview/en",
+      "jindao://catalog/brands",
+      "jindao://science/muscle-landmarks",
+      "jindao://science/splits",
+      "jindao://pricing/all"
+    ],
+    "prompts": 4,
+    "languages": ["de", "en"],
+    "readOnly": true,
+    "stateless": true
+  },
+  "provider": {
+    "name": "JINDAO",
+    "operator": "Nicolai Thyssen",
+    "country": "DE",
+    "email": "nicolai.thyssen@gmail.com"
+  }
+}

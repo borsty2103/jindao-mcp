@@ -1,0 +1,4 @@
+.agents/
+scripts/pre-flight-check.js
+node_modules/
+.DS_Store

@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "jindao": {
+      "type": "streamable-http",
+      "url": "https://jindao.de/mcp",
+      "description": "JINDAO Public Read-Only MCP Server (426 Gym Machines, 5,443 Exercises, 17 Muscle MEV/MAV/MRV, Calculators, Bilingual DE/EN)"
+    }
+  }
+}
